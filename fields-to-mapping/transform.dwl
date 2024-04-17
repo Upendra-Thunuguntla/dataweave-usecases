@@ -2,5 +2,5 @@
 output text
 ---
 write(payload map (
-    ($."Response Field") : "payload." ++ $."Source Field"
+    ($."TargetField") : "payload." ++ $."SourceField"
 ) reduce ($$ ++ $)) replace "\"payload." with "payload.\""
